@@ -1,0 +1,26 @@
+VERSAO REDUZIDA - MODULOS PRINCIPAIS
+
+Objetivo:
+Recorte demonstrativo do codigo-fonte original, mantendo os modulos relacionados a:
+1. Distribuicao e substituicao de camareiras;
+2. Estoque e montagem de kits;
+3. Envio e recebimento de lavanderia por lote.
+
+Integridade:
+Os arquivos .c e .h incluidos neste pacote foram copiados do projeto original sem alteracao de codigo. Foram apenas excluidos arquivos e modulos que nao fazem parte do recorte solicitado.
+
+Arquivos principais:
+- src/distribuicao.c: regras de distribuicao de UHs e redistribuicao por ausencia.
+- src/telas/tela_distribuicao.c: fluxo de tela da distribuicao.
+- src/estoque.c: montagem e manipulacao de kits.
+- src/estoque_operacoes.c: operacoes de estoque, envio e recebimento de lavanderia.
+- src/telas/tela_estoque.c: menu de estoque e lavanderia.
+- src/telas/tela_avaliacao.c: dependencia chamada pelo menu original de estoque.
+- src/csv.c, src/entrada.c, src/persistencia.c, src/log_resultados.c e src/consumo.c: rotinas compartilhadas utilizadas pelos modulos mantidos.
+
+Observacao sobre compilacao:
+Os arquivos-fonte incluidos foram compilados individualmente com GCC, padrao C11 e as opcoes -Wall -Wextra -Wpedantic, sem avisos ou erros.
+O arquivo main.c original nao foi incluido porque seu menu chama outras funcionalidades que foram retiradas deste recorte. Para manter o codigo original sem alteracoes, este pacote e um recorte demonstrativo dos modulos, nao uma versao executavel independente.
+O menu de estoque foi mantido integralmente, sem edicoes; por isso, sua opcao de fila de avaliacao e a respectiva tela permanecem como dependencia do fluxo original.
+
+Os arquivos CSV incluidos sao dados de apoio para os modulos selecionados.
